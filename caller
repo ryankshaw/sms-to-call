@@ -7,8 +7,8 @@ from googlevoice import Voice
 voice = Voice()
 voice.login("ryankshaw@gmail.com", "777lky")
 
-outgoingNumber = sys.arg[0]
-forwardingNumber = sys.arg[1] or None
+outgoingNumber = sys.argv[0]
+forwardingNumber = sys.argv[1] or None
 
 voice.call(outgoingNumber, forwardingNumber)
 

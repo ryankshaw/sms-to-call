@@ -1,0 +1,5 @@
+--- 
+  port: 993
+  username: username@gmail.com
+  host: imap.gmail.com
+  password: secretPassw0rd

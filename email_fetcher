@@ -23,7 +23,7 @@ loop do
         source   = imap.uid_fetch(uid, ['RFC822']).first.attr['RFC822']
       
         email = TMail::Mail.parse(source)
-        number_to_call = email.trim
+        number_to_call = email.body.trim
         number_to_call = "435" + number_to_call if number_to_call.length == 7 
         puts command = "./caller #{number_to_call} #{config['forwarding_number']}"
         puts `#{command}`

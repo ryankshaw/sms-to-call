@@ -3,10 +3,9 @@
 import sys
 
 from googlevoice import Voice
-from googlevoice.util import input
 
 voice = Voice()
-voice.login()
+voice.login("ryankshaw@gmail.com", "777lky")
 
 outgoingNumber = sys.arg[0]
 forwardingNumber = sys.arg[1] or None

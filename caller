@@ -3,18 +3,17 @@
 import sys
 
 from googlevoice import Voice
-from googlevoice.util import input
+# from googlevoice.util import input
 
 voice = Voice()
 voice.login("ryankshaw@gmail.com", "777lky")
 
-outgoingNumber = sys.argv[0]
-forwardingNumber = sys.argv[1] or None
-
-print outgoingNumber
-print forwardingNumber
+outgoingNumber = sys.argv[1]
+forwardingNumber = sys.argv[2] or None
 
 voice.call(outgoingNumber, forwardingNumber)
+print "successfully placed call"
 
-if input('Calling now... cancel?[y/N] ').lower() == 'y':
-    voice.cancel(outgoingNumber, forwardingNumber)
+# 
+# if input('Calling now... cancel?[y/N] ').lower() == 'y':
+#     voice.cancel(outgoingNumber, forwardingNumber)
